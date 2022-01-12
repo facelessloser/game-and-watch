@@ -299,24 +299,3 @@ echo "$(tput setab 1)$(tput setaf 3)$(tput bold)$(tput smul)$(tput cuf 20)Someth
   exit 1
 
 fi
-
-########################################################################################################################
-#15 
-# cd ~/opt/game-and-watch-backup
-# ./1_sanity_check.sh
-########################################################################################################################
-
-echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)15: Running <game-and-watch-backup> sanity check$(tput sgr 0)" ; echo
-cd ~/opt/game-and-watch-backup/
-./1_sanity_check.sh
-
-if [ $? -eq 0 ]
-then
-echo "$(tput setaf 5)$(tput bold)$(tput smul)Everything installed and sanity check ok, your seem to be ready to start making a backup of your device!$(tput sgr 0)" ; echo
-
-else
-
-echo "$(tput setab 1)$(tput setaf 3)$(tput bold)$(tput smul)$(tput cuf 20)Something went wrong!$(tput sgr 0)"  >&2
-  exit 1
-
-fi
