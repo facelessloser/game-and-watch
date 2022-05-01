@@ -121,7 +121,8 @@ fi
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)6: Downloading <xpack-none-eabiarm-gcc>$(tput sgr 0)" ; echo
 mkdir -p ~/opt
 cd ~/opt
-wget https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz
+#wget https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz
+wget https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.3.1-2.3.1/xpack-arm-none-eabi-gcc-10.3.1-2.3.1-linux-arm.tar.gz
 
 if [ $? -eq 0 ]
 then
@@ -139,7 +140,8 @@ fi
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)7: Extracting <xpack-none-eabiarm-gcc>$(tput sgr 0)" ; echo
-tar xvf xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz xpack-arm-none-eabi-gcc-10.2.1-1.1 
+#tar xvf xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz xpack-arm-none-eabi-gcc-10.2.1-1.1 
+tar xvf xpack-arm-none-eabi-gcc-10.3.1-2.3.1-linux-arm.tar.gz xpack-arm-none-eabi-gcc-10.3.1-2.3.1 
 
 if [ $? -eq 0 ]
 then
@@ -157,7 +159,8 @@ fi
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)8: Cleaning up after extraction$(tput sgr 0)" ; echo
-rm xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz
+#rm xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz
+rm xpack-arm-none-eabi-gcc-10.3.1-2.3.1-linux-arm.tar.gz
 
 if [ $? -eq 0 ]
 then
@@ -179,7 +182,8 @@ fi
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)9: Setting variables$(tput sgr 0)" ; echo
-export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin/
+#export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin/
+export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-10.3.1-2.3.1/bin/
 export ADAPTER=rpi
 export adapter=rpi
 export OPENOCD=/home/pi/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-2.1/.content/bin/openocd
