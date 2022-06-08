@@ -122,7 +122,6 @@ echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)6: Downloading <xpack
 mkdir -p ~/opt
 cd ~/opt
 # having issus with downloading go here https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/
-#wget https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.3.1-2.3/xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-arm.tar.gz
 wget https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v11.2.1-1.2/xpack-arm-none-eabi-gcc-11.2.1-1.2-linux-arm.tar.gz
 
 if [ $? -eq 0 ]
@@ -141,7 +140,7 @@ fi
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)7: Extracting <xpack-none-eabiarm-gcc>$(tput sgr 0)" ; echo
-#tar xvf xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-arm.tar.gz xpack-arm-none-eabi-gcc-10.3.1-2.3 
+### Also change the xx.x.x-x.x version here
 tar xvf xpack-arm-none-eabi-gcc-11.2.1-1.2-linux-arm.tar.gz xpack-arm-none-eabi-gcc-11.2.1-1.2 
 
 if [ $? -eq 0 ]
@@ -156,10 +155,11 @@ echo "$(tput setab 1)$(tput setaf 3)$(tput bold)$(tput smul)$(tput cuf 20)Someth
 fi
 
 ########################################################################################################################
-# 8: rm xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-arm.tar.gz
+# 8: rm xpack-arm-none-eabi-gcc-11.2.1-1.2-linux-arm.tar.gz
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)8: Cleaning up after extraction$(tput sgr 0)" ; echo
+### Also change the xx.x.x-x.x version here
 rm xpack-arm-none-eabi-gcc-11.2.1-1.2-linux-arm.tar.gz
 
 if [ $? -eq 0 ]
@@ -175,16 +175,18 @@ fi
 
 ########################################################################################################################
 # 9:
-# export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/
+# export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-11.2.1-1.2/bin/
 # export ADAPTER=rpi
 # export adapter=rpi
 # export OPENOCD=/home/pi/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-2.1/.content/bin/openocd
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)9: Setting variables$(tput sgr 0)" ; echo
+### Also change the xx.x.x-x.x version here
 export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-11.2.1-1.2/bin
 export ADAPTER=rpi
 export adapter=rpi
+### Dont need to change it here since openocd downloads the lastest
 export OPENOCD=/home/pi/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-2.1/.content/bin/openocd
 
 if [ $? -eq 0 ]
@@ -201,13 +203,14 @@ fi
 
 ########################################################################################################################
 # 10:
-# echo export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/ >>~/.bashrc
+# echo export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-11.2.1-1.2/bin/ >>~/.bashrc
 # echo export ADAPTER=rpi >>~/.bashrc
 # echo export adapter=rpi >>~/.bashrc
 # echo export OPENOCD=/home/pi/.local/xPacks/@xpack-dev-tools/openocd/0.11.0-1.1/.content/bin/openocd >>~/.bashrc
 ########################################################################################################################
 
 echo "$(tput setaf 5)$(tput bold)$(tput smul)$(tput cuf 20)10: Saving variables$(tput sgr 0)" ; echo
+### Also change the xx.x.x-x.x version here
 echo export GCC_PATH=/home/pi/opt/xpack-arm-none-eabi-gcc-11.2.1-1.2/bin >>~/.bashrc
 echo export ADAPTER=rpi >>~/.bashrc
 echo export adapter=rpi >>~/.bashrc
